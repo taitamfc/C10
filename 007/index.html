@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My title</title>
+	</head>
+
+	<body>
+		<a id="tag_a" href="https://google.com">
+			<span>My Link</span>
+		</a>
+		<h1>My header</h1>
+
+		<input id="username" type="text" name="username" value="Nguyễn Văn A">
+
+
+		<script type="text/javascript">
+			/*
+			toàn bộ tài liệu tìm toàn bộ thẻ A
+			*/
+			//var tag_a = document.getElementsByTagName('a');
+
+			/*
+			toàn bộ tài liệu tìm thẻ A có thuộc tính Id là tag_a
+			*/
+			var tag_a = document.getElementById('tag_a');
+
+			//truy cập vào thuộc tính ID
+			console.log(tag_a.id);//tag_a
+
+			//truy cập vào thuộc tính href
+			console.log(tag_a.href);//google.com
+
+			//truy cập vào nội dung bên trong - chỉ chữ thôi
+			console.log(tag_a.innerText);//My Link
+
+			//truy cập vào nội dung bên trong - lấy cả html
+			console.log(tag_a.innerHTML);//<span>My Link</span>
+
+			//thay đổi nội dung bên trong - chỉ đưa text vào
+			tag_a.innerText = "Hello link";
+
+			//thay đổi nội dung bên trong - chỉ đưa text vào
+			tag_a.innerHTML = "<strong> Hello link </strong>";
+		</script>
+
+		<script type="text/javascript">
+			/*
+				lấy ô input có id = username
+			*/
+
+			var username_input = document.getElementById('username');
+
+			//truy cập thuộc tính
+			var username = username_input.value;
+
+			console.log(username);
+
+			//thay đổi giá trị thuộc tính value
+			username_input.value = 'Nguyễn Văn B';
+		</script>
+
+
+	</body>
+
+</html>

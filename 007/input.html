@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Xử lý input</title>
+</head>
+<body>
+	<input type="text" name="amount" id="amount" value="">
+
+	<button type="button" id="convert" onclick="xu_ly()">Convert</button>
+
+	<div id="ket_qua"></div>
+
+	<script type="text/javascript">
+		function xu_ly(){
+			//lấy giá trị nhập vào: tìm phần tử có id là amount
+			var amount_input = document.getElementById('amount');
+
+			//lấy giá trị thuộc tính value
+			var amount = amount_input.value; //123456
+
+			//lấy phần tử có id là ket_qua
+			var ket_qua_elm = document.getElementById('ket_qua');
+
+			//thay đổi nội dung bên trong
+			ket_qua_elm.innerHTML = "Kết quả là: " + amount;
+		}
+	</script>
+
+</body>
+</html>
