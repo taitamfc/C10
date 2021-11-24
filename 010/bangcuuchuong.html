@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		for( var i = 2; i < 10; i++ ){
+			/*
+				i:2
+					m:1 2 3 4 5 6 7 8 9
+				i:3
+					m:1 2 3 4 5 6 7 8 9	
+				i:4
+					m:1 2 3 4 5 6 7 8 9
+				...
+				i:9
+					m:1 2 3 4 5 6 7 8 9	
+			*/
+			for( var m = 1; m < 10; m++ ){
+
+				document.write(i + " x " + m + " = " + i*m + "<br>");
+			}
+
+			document.write("<hr>");
+		}
+	</script>
+</body>
+</html>

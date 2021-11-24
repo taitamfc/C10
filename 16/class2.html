@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Class 2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+		ClassName: Tên lớp
+		========================
+		Properties : Thuộc tính
+		========================
+		Methods: Phương thức
+		========================
+
+		- THay đổi giá trị thuộc tính
+			Gọi tới thuộc tính và thay đổi giá trị
+		- Sử dụng thuộc tính trong lớp
+			Dùng this gọi tới các thuộc tính và phương thức
+		- Phương thức set và get
+
+		*/
+
+		//khai báo lớp Person
+		function Person( input_name ){
+
+			//khai báo các thuộc tính
+			this.name = input_name;//Nguyễn Văn E
+
+			//khai báo các phương thức
+			this.speak = function(){
+				document.write('Tôi là : '+ this.name);
+			}
+
+			//thiết lập giá trị mới cho thuộc tính name...
+			this.setName = function( ts_name ){
+				this.name = ts_name;
+			}
+
+			//trả về giá trị thuộc tính name
+			this.getName = function(){
+				return this.name;
+			}
+		}
+
+		let objPerson = new Person('Nguyễn Văn E');
+
+		//truy xuất thuộc tính name
+		console.log( objPerson.name );//'Nguyễn Văn E'
+
+		//thay đổi giá trị thuộc tính name
+		objPerson.name = 'Nguyễn Văn B';
+
+		//thay đổi giá trị thuộc tính qua phương thức setName
+		objPerson.setName('Nguyễn Văn C');
+
+		//truy xuất thuộc tính name
+		console.log( objPerson.name );//'Nguyễn Văn C'
+
+
+		//truy xuất phương thức speak
+		objPerson.speak();
+
+		// console.log();
+		// document.write();
+		//.innerHTML = '';
+
+
+	</script>
+</body>
+</html>

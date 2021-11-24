@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas</title>
+</head>
+<body>
+
+	<canvas id="myCanvas" onkeydown="" width="1000" height="500" style="border: 1px solid;"></canvas>
+
+	<script type="text/javascript">
+		let myCanvas = document.getElementById('myCanvas');
+		let ctx = myCanvas.getContext('2d');
+
+
+		/*
+		
+		*/
+		let x = 300;
+		let y = 300;
+		let w = 200;
+		let h = 100;
+		ctx.fillRect(x,y,w,h);
+
+		let speed = 5;
+
+		document.addEventListener('keydown', function(e){
+		    let keycode = e.keyCode;
+		    switch( keycode ){
+		    	case 37:
+		    		//ArrowLeft
+		    		ctx.clearRect(x,y,w,h);
+		    		x = x - speed;
+		    		ctx.fillRect(x,y,w,h);
+
+		    		break;
+		    	case 38:
+		    		//ArrowUp
+		    		ctx.clearRect(x,y,w,h);
+		    		y = y - speed;
+		    		ctx.fillRect(x,y,w,h);
+
+		    		break;
+		    	case 39:
+		    		//ArrowRight
+		    		ctx.clearRect(x,y,w,h);
+		    		x = x + speed;
+		    		ctx.fillRect(x,y,w,h);
+		    		break;
+		    	case 40:
+		    		//ArrowDown
+		    		ctx.clearRect(x,y,w,h);
+		    		y = y + speed;
+		    		ctx.fillRect(x,y,w,h);
+
+		    		break;
+		    }
+		});
+
+
+	</script>
+</body>
+</html>
