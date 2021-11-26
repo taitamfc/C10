@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jquery</title>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+		<style type="text/css">
+			.error {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<form id="login">
+			Email <input type="text" id="email" name="email"> 
+			<p id="emailError" class="error"></p>
+			<br>
+			Password <input type="password" id="password" name="password">
+			<p id="passwordError" class="error"></p><br>
+
+			<input type="button" id="btn" value="Login"> 
+		</form>
+
+		<script type="text/javascript">
+
+			let a = 5;
+			let b = setTimeout( function(){
+
+			},2000 );
+			let c = a + b;
+
+			jQuery( document ).ready( function(){
+
+				$.ajax({
+					url : 'https://619bb4e568ebaa001753c576.mockapi.io/students',
+					method:'GET',
+					dataType:'json'
+				}).done( function(res) {
+					
+					for( let item of res ){
+						document.write(item.name + '<br>');
+					}
+				});
+
+				$('#btn').click( function(){
+
+					let can_do = true;
+					if( $('#email').val() == '' ){
+						can_do = false;
+						$('#emailError').html('Email is required field');
+					}else{
+						$('#emailError').html('');
+					}
+
+					if( $('#password').val() == '' ){
+						can_do = false;
+						$('#passwordError').html('Password is required field');
+					}else{
+						$('#passwordError').html('');
+					}
+
+					if( can_do ){
+						let ajax_data = {
+							name : $('#email').val(),
+							city : $('#password').val(),
+						};
+
+						//ajax
+						let ajax_url = 'https://619bb4e568ebaa001753c576.mockapi.io/students';
+						
+						$.ajax({
+							url: ajax_url,
+							method:'POST',
+							dataType:'json',
+							data : ajax_data
+						}).done( function(res) {
+							console.log(res);
+						  	alert('thanh cong')
+						});
+					}
+
+
+					
+
+					//
+				});
+			});
+		</script>
+		
+
+		
+	</body>
+</html>

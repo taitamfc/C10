@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> OOP</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//khai bao doi tuong
+		var person = {
+			firstName : "Nguyen",
+			lastName : "Van A",
+			age: 18,
+			eyeColor: "black",
+			speak:function (){
+				console.log('hello');
+			}
+		};
+
+		//truy cap thuoc tinh
+		console.log( person.age );
+		
+		//truy cap phuong thuc
+		person.speak();
+
+		var person_2 = {
+			firstName: "Nguyen",
+			lastName: "Van B",
+			age: 20,
+			eyeColor: "brown",
+			speak: function (){
+				console.log('bye');
+			}
+		};
+
+		console.log(person);
+		console.log(person_2);
+
+	</script>
+</body>
+</html>

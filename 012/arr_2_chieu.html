@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mảng 2 chiều</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var tu  = [
+			["Toán","Lý","Hóa"], // 0
+			//0      1    2	
+			["Văn","Su","Dia"]   // 1
+			//0     1      2
+		];
+
+		//console.log( tu[0][0] );//Toán
+
+		//thay địa thành sinh
+		//tu[1][2] = "Sinh";
+
+
+		for( var i = 0; i < tu.length; i ++ ){
+
+			for( var j = 0; j < tu[i].length; j++  ){
+
+				console.log( tu[i][j] );
+				tu[i][j] = 0;
+				/*
+				  i = 0;
+				  	j = 0 => tu[0][0]
+				  	j = 1 => tu[0][1]
+				  	j = 2 => tu[0][2]		
+				*/
+
+				/*
+				  i = 1;
+				  	j = 0 => tu[1][0]
+				  	j = 1 => tu[1][1]
+				  	j = 2 => tu[1][2]		
+				*/
+			}
+		}
+
+	</script>
+</body>
+</html>

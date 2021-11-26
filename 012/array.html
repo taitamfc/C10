@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mảng</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var books = ["Toán","Lý","Hóa"];
+					//  0     1    2
+
+		//xuất ra độ dài của mảng
+		console.log( books.length );	//3		
+
+		//truy xuất phần tử chỉ số 1
+		console.log( books[1] );
+
+		//thay đổi giá trị phần tử
+		books[1] = "Sinh";
+
+		console.log("========FOR THUONG===========");
+
+		//dùng vòng lặp để duyệt mảng
+		for( var i = 0; i < books.length ; i++ ){
+			/*
+			i = 0;
+			console.log( books[i] ); //Toan
+			*/
+
+			/*
+			i = 1;
+			console.log( books[i] ); //Sinh
+			*/
+
+			/*
+			i = 1;
+			console.log( books[i] ); //Hoa
+			*/
+			console.log( books[i] );
+		}
+
+		//for in
+
+		console.log("========FOR IN===========");
+		for( var i in books ){
+			console.log( books[i] );
+		}
+
+		console.log("========FOR OF===========");
+		for( var book of books ){
+			console.log( book );
+		}
+
+
+
+		//
+	</script>
+</body>
+</html>

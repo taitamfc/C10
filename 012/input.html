@@ -1,0 +1,52 @@
+So 1: <input type="text" id="so_thu_nhat" value=""> <br>
+So 2: <input type="text" id="so_thu_hai" value=""> <br>
+Phep tinh:
+<select id="phep_tinh">
+	<option value="+">Cộng</option>
+	<option value="-">Trừ</option>
+	<option value="*">Nhân</option>
+	<option value="/">Chia</option>
+</select>
+<br>
+<button type="button" onclick="khoi_xu_ly()">Tính</button>
+
+<script type="text/javascript">
+	function khoi_xu_ly(){
+		//kiểm tra đã bắt sự kiện hay chưa
+		//alert(123);
+		//lấy giá trị nhập vào của ST 1
+		let st1 = document.getElementById('so_thu_nhat').value;//'1'
+		//lấy giá trị nhập vào của ST 2
+		let st2 = document.getElementById('so_thu_hai').value;//'2'
+		//lấy giá trị nhập vào của phép tính
+		let phep_tinh = document.getElementById('phep_tinh').value;// + - * /
+
+		//kiểm tra đã lấy được giá trị 2 ô input chưa ?
+		// console.log('st1',st1);
+		// console.log('st2',st2);
+		// console.log('phep_tinh',phep_tinh); 
+
+		//chuyen doi kieu du lieu tu chu sang so
+		st1 = parseInt(st1);
+		st2 = parseInt(st2);
+		let ket_qua = 0;
+		//xu lý + - * /
+		switch( phep_tinh ) {
+			case '+':
+				ket_qua = st1 + st2;
+				break;
+			case '-':
+				ket_qua = st1 - st2;
+				break;
+			case '*':
+				ket_qua = st1 * st2;
+				break;
+			case '/':
+				ket_qua = st1 / st2;
+				break;
+		}
+
+		//xuất
+		console.log(ket_qua);
+	}
+</script>
