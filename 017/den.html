@@ -27,6 +27,7 @@
 	</style>
 </head>
 <body>
+	<p id="pin_status"></p>
 	<div class="black">
 	  <ul class="light">
 	    <li id="green"></li>
@@ -61,7 +62,11 @@
 					//giam nang luong cua vien pin: decreaseEnergy
 					this.battery.decreaseEnergy();
 
+					//lay gia tri vien pin
+					let pin_status = this.battery.getEnergy();
+
 					document.getElementById('green').style.opacity = 1;
+					document.getElementById('pin_status').innerHTML = pin_status;
 				}else{
 					document.getElementById('green').style.opacity = 0.5;
 				}
