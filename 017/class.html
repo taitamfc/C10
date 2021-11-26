@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Class</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		let HCN = function(ts_chieu_dai,ts_chieu_rong){
+
+			//thuoc tinh chieu dai
+			this.chieu_dai = ts_chieu_dai;
+
+			//thuoc tinh chieu rong
+			this.chieu_rong = ts_chieu_rong;
+
+			//phuong thuc tinh dien tich
+			this.tinh_dien_tich = function(){
+				let kq = this.chieu_dai * this.chieu_rong;
+				console.log( kq );
+			}
+
+			//phuong thuc tinh chu vi
+			this.tinh_chu_vi = function(){
+				let kq =  (this.chieu_dai + this.chieu_rong) * 2;
+				console.log( kq );
+			}
+		}
+
+		let hcn1 = new HCN(200,100);
+
+		
+
+		// //thay doi gia tri thuoc tinh
+		// hcn1.chieu_dai 	= 20;
+		// hcn1.chieu_rong = 30;
+
+		console.log(hcn1);
+
+		// truy cap cac phuong thuc
+		hcn1.tinh_dien_tich();
+		hcn1.tinh_chu_vi();
+
+
+	</script>
+
+</body>
+</html>
